@@ -17,23 +17,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PMn-9V-42a">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="aVk-Mx-K8a"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="D5G-lF-s51"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pas-bP-WUg">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oFV-DY-a1j"/>
+                                    <barButtonItem title="Создать контакт" id="EOL-6c-Oak">
+                                        <connections>
+                                            <action selector="showNewContactAlert" destination="BYZ-38-t0r" id="zxG-oW-lUD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PMn-9V-42a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8LH-nx-Qwu"/>
+                            <constraint firstItem="pas-bP-WUg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JDm-ed-XSr"/>
                             <constraint firstItem="PMn-9V-42a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MoJ-lz-Jco"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pas-bP-WUg" secondAttribute="bottom" id="WM8-7g-VLO"/>
                             <constraint firstItem="PMn-9V-42a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cg8-SC-VXj"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="PMn-9V-42a" secondAttribute="bottom" id="msE-Ns-DJM"/>
+                            <constraint firstItem="pas-bP-WUg" firstAttribute="top" secondItem="PMn-9V-42a" secondAttribute="bottom" id="ebh-wn-3AA"/>
+                            <constraint firstItem="pas-bP-WUg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mc3-f8-kro"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="PMn-9V-42a" id="9ta-bj-BWw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,13 +8,44 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private var contacts = [ContactProtocol]()
+    var contacts: [ContactProtocol] = [] {
+        didSet {
+            contacts.sort { $0.title < $1.title }
+        }
+    }
+    @IBOutlet var tableView: UITableView!
+    
+    @IBAction func showNewContactAlert() {
+        let alertController = UIAlertController(title: "Создайте новый контакт", message: "Введите имя и телефон", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Имя"
+        }
+        alertController.addTextField { textField in
+            textField.placeholder = "Номер телефона"
+        }
+        //Кнопки
+        let createButton = UIAlertAction(title: "Создать", style: .default) { _ in
+            guard let contactName = alertController.textFields?[0].text, let contactPhone = alertController.textFields?[1].text else {
+                return
+            }
+            //Новый контакт
+            let contact = Contact(title: contactName, phone: contactPhone)
+            self.contacts.append(contact)
+            self.tableView.reloadData()
+        }
+        //Кнопка отмены
+        let cancelButton = UIAlertAction(title: "Отменить", style: .cancel, handler: nil)
+        //добавление кнопок в алерт контроллер
+        alertController.addAction(cancelButton)
+        alertController.addAction(createButton)
+        //Отображение алерт контроллера
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     private func loadContacts() {
         contacts.append(Contact(title: "Александр Витальевич", phone: "+79257644244"))
         contacts.append(Contact(title: "Георгий Алексеевич", phone: "+78887776655"))
         contacts.append(Contact(title: "Воронин Сергей", phone: "+79999999999"))
-        contacts.sort{ $0.title < $1.title }
     }
     
     override func viewDidLoad() {
