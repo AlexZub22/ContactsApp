@@ -18,6 +18,7 @@ struct Contact: ContactProtocol {
     var phone: String
 }
 
+//Организация хранения данных
 protocol ContactStorageProtocol {
     func load() -> [ContactProtocol]
     func save(contacts: [ContactProtocol])

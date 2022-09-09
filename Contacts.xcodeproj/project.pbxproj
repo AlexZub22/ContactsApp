@@ -42,6 +42,16 @@
 		03174A2528C7597D003A4F92 = {
 			isa = PBXGroup;
 			children = (
+				03174A3F28C7597F003A4F92 /* Info.plist */,
+				03174A3728C7597D003A4F92 /* Main.storyboard */,
+				03174A3C28C7597F003A4F92 /* LaunchScreen.storyboard */,
+				03174A5128CB48B3003A4F92 /* Resources */,
+				03174A5028CB4899003A4F92 /* Helpers */,
+				03174A4E28CB4877003A4F92 /* Network */,
+				03174A4F28CB4886003A4F92 /* Controller */,
+				03174A4D28CB485C003A4F92 /* Storage */,
+				03174A4928CB480B003A4F92 /* View */,
+				03174A4528C8A129003A4F92 /* Model */,
 				03174A3028C7597D003A4F92 /* Contacts */,
 				03174A2F28C7597D003A4F92 /* Products */,
 			);
@@ -58,14 +68,8 @@
 		03174A3028C7597D003A4F92 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				03174A4528C8A129003A4F92 /* Model */,
 				03174A3128C7597D003A4F92 /* AppDelegate.swift */,
 				03174A3328C7597D003A4F92 /* SceneDelegate.swift */,
-				03174A3528C7597D003A4F92 /* ViewController.swift */,
-				03174A3728C7597D003A4F92 /* Main.storyboard */,
-				03174A3A28C7597F003A4F92 /* Assets.xcassets */,
-				03174A3C28C7597F003A4F92 /* LaunchScreen.storyboard */,
-				03174A3F28C7597F003A4F92 /* Info.plist */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -76,6 +80,74 @@
 				03174A4628C8A16D003A4F92 /* Contact.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		03174A4928CB480B003A4F92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03174A4C28CB4836003A4F92 /* Xibs */,
+				03174A4B28CB482F003A4F92 /* Cells */,
+				03174A4A28CB481A003A4F92 /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03174A4A28CB481A003A4F92 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		03174A4B28CB482F003A4F92 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		03174A4C28CB4836003A4F92 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		03174A4D28CB485C003A4F92 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		03174A4E28CB4877003A4F92 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		03174A4F28CB4886003A4F92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03174A3528C7597D003A4F92 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		03174A5028CB4899003A4F92 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		03174A5128CB48B3003A4F92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03174A3A28C7597F003A4F92 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
