@@ -373,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75B9734G42;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Contacts/Info.plist;
+				INFOPLIST_FILE = "/Users/alexzub/Desktop/учеба/Contacts/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -401,7 +401,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75B9734G42;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Contacts/Info.plist;
+				INFOPLIST_FILE = "/Users/alexzub/Desktop/учеба/Contacts/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
